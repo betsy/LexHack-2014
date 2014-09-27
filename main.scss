@@ -6,17 +6,18 @@ body{
 	text-align: center;
 	#title{
 		font-weight:bold;
+		margin-bottom:3%;
 	}
-	#demo{
+	.demo{
 		@extend .unselectable;
 		display:inline-block;
 		background-color:#330066;
 		color:#FFF;
-		margin:1%;
+		margin:2%;
 		padding:1%;
 	}
-	#demo:hover{
-		background-color:#8585BF;
+	.demo:hover{
+		background-color:#430C9D;
 	}
 	.unselectable {
 	   -moz-user-select: none;
@@ -26,9 +27,13 @@ body{
 	   user-select: none;
 	}
 	#history{
+	width:50%;
+		float:left;
 		div{
 			font-size:0.5em;
 			margin-bottom:2%;
 		}
+		margin-left:3%;
+		margin-right:3%;
 	}
 }
