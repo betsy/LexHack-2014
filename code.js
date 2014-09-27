@@ -7,7 +7,7 @@ year = test.getFullYear();
 
 var narration = [/* 0 */ "A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship and you seem to have forgotten everything about your past and who you are",
  /* 1 */"For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?", 
- /* 2 */"You notice that the oxygen generators are no longer working… you estimate that you have about 10 mins of oxygen and set a timer on your watch", 
+ /* 2 */"You notice that the oxygen generators are no longer working... you estimate that you have about 10 mins of oxygen and set a timer on your watch", 
  /* 3 */"The prison wardens back on the planet most likely know that all of the prisoners escaped from their cells into the main portion of the ship (you also know that there are escape pods somewhere on the ship: you want to find one and get back home)", 
  /* 4 */"You hear someone coming...what do you do? You have two options: approach or avoid the sound", 
  /* 5 */"The sound was made by another prisoner, they knock you out and you are unconscious for one minute.",
@@ -40,6 +40,7 @@ var choices = [
 ];
 
 var stage=0;
+var counter;
 
 function myFunction(index) {
 	stage=stage%narration.length;
@@ -53,8 +54,15 @@ function myFunction(index) {
     clearHidden();
 
 	stage = index; //EDIT THIS LATER
+
+	if(stage==2 && !counting){
+		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+    	counting=true;
+    }
+
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
+
 	for(var i=0;i<choices[stage].length;i++){ (function(_i) {
 		var newButton=document.createElement("div");
 		newButton.className="demo";
@@ -83,19 +91,23 @@ function clearHidden(){
 	}
 }
 
-var count=900;
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-
+var counting=false;
+var count=20;
 function timer()
 {
-	document.getElementById("timer").innerText=count;
-  count=count-1;
+	document.getElementById("timer").innerText="Oxygen: "+count;
+  	count=count-1;
+    document.getElementById("game").style.opacity=count/20;
   if (count <= 0)
   {
      clearInterval(counter);
      //counter ended, do something here
+     document.getElementById("lose").style.display="block";
+     document.getElementById("lose").style.opacity=1;
      return;
   }
+
+
 
   //Do code for showing the number of seconds here
 }

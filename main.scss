@@ -1,13 +1,20 @@
 body{	
-	background-color:#666699;
 	background-image:linear-gradient(to top, white 0%, #08082C 100%);
 	background-size:100%;
 	min-height:100vh;
 	font-size:50px;
 	font-family:Verdana;
-	padding: 5px;
 	text-align: center;
 	color:#FFF;
+	#game{
+		padding: 5px;
+		margin:none;
+		padding:none;
+	}
+	#timer{
+		position:absolute;
+		font-size:0.5em;
+	}
 	#title{
 		font-weight:bold;
 		margin:3%;
@@ -31,7 +38,7 @@ body{
 	   user-select: none;
 	}
 	#history{
-	width:50%;
+	width:60%;
 		float:left;
 		div{
 			font-size:0.5em;
@@ -39,5 +46,18 @@ body{
 		}
 		margin-left:3%;
 		margin-right:3%;
+	}
+	#lose{
+		position: absolute;
+		left:0;
+		right:0;
+		text-align:center;
+		opacity:0;
+		display:none;
+		transition:opacity 1s;
+		a{
+			text-decoration:none;
+			color:inherit;
+		}
 	}
 }
