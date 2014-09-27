@@ -5,6 +5,10 @@ day = test.getDate();
 year = test.getFullYear();
 // document.write("<p> ",month,"/",day,"/",year," </p>");
 
+$( document ).ready(function() {
+    $("#game").hide(0).delay(500).fadeIn(3000)
+});
+
 var narration = [
  /* 0 */ "A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship and you seem to have forgotten everything about your past and who you are",
  /* 1 */"For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?", 
@@ -37,7 +41,7 @@ var narration = [
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
 var choices = [
   /* s#  a# */	
-  /* 0   0 */ [{next: 1, text: "Click me"}],
+  /* 0   0 */ [{next: 27, text: "Click me"}],
   /* 1   1 */ [{next: 2, text: "Continue"}],
   /* 2   2 */ [{next: 3, text: "Gotta hurry"}],
   /* 3   3 */ [{next: 4, text: "Continue"}],
@@ -89,17 +93,9 @@ function myFunction(index) {
     }
     else if(stage==5 || stage==8 || stage==11 || stage==14) count-=60;
     else if(stage==28){
-    	document.getElementById("game").style.display="block";
-     document.getElementById("game").style.transition="opacity 5s";
-     setTimeout(function() {
-     	document.getElementById("game").style.opacity=0;
-     }, 0);
-
-     	document.getElementById("win").style.display="block";
-     document.getElementById("win").style.transition="opacity 2s";
-     setTimeout(function() {
-     	document.getElementById("win").style.opacity=1;
-     }, 0);
+		$('#game').fadeOut(500, function(){
+			$('#win').fadeIn(5000);
+		});
     }
 
     var buttons=document.getElementById("buttons");

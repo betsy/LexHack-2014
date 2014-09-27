@@ -10,8 +10,6 @@ body{
 		padding: 5px;
 		margin:none;
 		padding:none;
-		opacity:1;
-		transition:opacity 1s;
 		#battery{
 			position:absolute;
 			float:right;
@@ -67,13 +65,11 @@ body{
 		}
 	}
 	#win{
-		opacity:1;
-		transition:opacity 1s;
+		margin-top:30%;
 		display:none;
 		position:absolute;
 		left:0;
 		right:0;
-		width:50%;
 		text-align: center;
 	}
 }
