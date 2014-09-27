@@ -13,6 +13,13 @@ body {
     body #game #battery {
       position: absolute;
       float: right; }
+    body #game .wobble {
+      display: block;
+      position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      width: 15%; }
   body #timer {
     position: absolute;
     font-size: 0.5em; }
@@ -52,3 +59,10 @@ body {
     body #lose a {
       text-decoration: none;
       color: inherit; }
+  body #win {
+    margin-top: 30%;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center; }

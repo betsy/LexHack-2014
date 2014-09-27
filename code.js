@@ -5,6 +5,10 @@ day = test.getDate();
 year = test.getFullYear();
 // document.write("<p> ",month,"/",day,"/",year," </p>");
 
+$( document ).ready(function() {
+    $("#game").hide(0).delay(500).fadeIn(3000);
+});
+
 var narration = [
  /* 0 */ "A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship and you seem to have forgotten everything about your past and who you are",
  /* 1 */"For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?", 
@@ -88,6 +92,10 @@ var stage=0;
 var counter;
 
 function myFunction(index) {
+
+	var audio = new Audio('01 - March Of The Toys.mp3'); //unfortunately this keeps starting and playing over... I want to start it once and just keep it playing...
+	audio.play();
+
 	stage = index; //EDIT THIS LATER
 	stage=stage%narration.length;
 	var demoElement = document.getElementById("demo");
@@ -104,7 +112,12 @@ function myFunction(index) {
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     	counting=true;
     }
-    if(stage==5 || stage==8 || stage==11) count-=60;
+    else if(stage==5 || stage==8 || stage==11 || stage==14 || stage==18) count-=60;
+    else if(stage==28){
+		$('#game').fadeOut(500, function(){
+			$('#win').fadeIn(5000, function(){$('#win').fadeOut(5000, function(){location.reload();});});
+		});
+    }
 
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
@@ -141,7 +154,7 @@ var counting=false;
 var count=600;
 function timer()
 {
-	document.getElementById("timer").innerText="Oxygen: "+count+" stage: "+stage;
+	document.getElementById("timer").innerText="Oxygen: "+count;
   	count=count-1;
     document.getElementById("game").style.opacity=count/600;
   if (count <= 0)
@@ -149,11 +162,27 @@ function timer()
      clearInterval(counter);
      //counter ended, do something here
      document.getElementById("lose").style.display="block";
-     document.getElementById("lose").style.opacity=1;
+     document.getElementById("lose").style.transition="opacity 5s";
+     setTimeout(function() {
+     	document.getElementById("lose").style.opacity=1;
+     }, 0);
      return;
   }
+<<<<<<< HEAD
 
 
 
   //Do code for showing the number of seconds here
 }
+=======
+}
+
+$(function(){
+    $(".button_container").on("mouseover", function(){
+            $(this).css({
+                left:(Math.random()*200)+"px",
+                top:(Math.random()*200)+"px",
+            });
+    });
+});
+>>>>>>> FETCH_HEAD
