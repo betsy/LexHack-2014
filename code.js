@@ -87,7 +87,20 @@ function myFunction(index) {
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     	counting=true;
     }
-    if(stage==5 || stage==8 || stage==11 || stage=14) count-=60;
+    else if(stage==5 || stage==8 || stage==11 || stage==14) count-=60;
+    else if(stage==28){
+    	document.getElementById("game").style.display="block";
+     document.getElementById("game").style.transition="opacity 5s";
+     setTimeout(function() {
+     	document.getElementById("game").style.opacity=0;
+     }, 0);
+
+     	document.getElementById("win").style.display="block";
+     document.getElementById("win").style.transition="opacity 2s";
+     setTimeout(function() {
+     	document.getElementById("win").style.opacity=1;
+     }, 0);
+    }
 
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);

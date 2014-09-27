@@ -9,7 +9,9 @@ body {
   body #game {
     padding: 5px;
     margin: none;
-    padding: none; }
+    padding: none;
+    opacity: 1;
+    transition: opacity 1s; }
     body #game #battery {
       position: absolute;
       float: right; }
@@ -52,3 +54,12 @@ body {
     body #lose a {
       text-decoration: none;
       color: inherit; }
+  body #win {
+    opacity: 1;
+    transition: opacity 1s;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    text-align: center; }
