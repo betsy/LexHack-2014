@@ -1,4 +1,4 @@
-test = new Date();
+btest = new Date();
 month = test.getMonth();
 month = (month * 1) + 1;
 day = test.getDate();
@@ -34,7 +34,12 @@ var narration = [
  /* 25 */"Once inside, you see a similar control panel. However, this one also has an input bar (for the coordinates of the final destination) You want to close the door. Which button do you push now?", 
  /* 26 */"red button flashes, but nothing else changes", 
  /* 27*/"door closes behind you",
- /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
+ /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
+/* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT’S TOO LATE!!!!!!!",
+/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope",
+/* 31 */"Suddenly, you see an oxygen tank floating around in space! Try to catch it!",
+/* 32 */"Congrats! You have one more minute of oxygen", 
+
 var choices = [
 <<<<<<< HEAD
   [{next: 1, text: "Click me if you dare"}],
@@ -72,6 +77,10 @@ var choices = [
   /* 25   21*/ [{next: 26, text: "Green"}, {next: 27, text: "Red"}, {next: 26, text: "Blue"}],
   /* 26   22*/ [{next: 25, text: "Continue"}],
   /* 27   23*/ [{next: 28, text: "Continue"}],
+               [{next: 29, text: "Continue"}], 
+               [{next: 30, text: "Click me to catch me!!!"}],
+               [{next: 31, text: "Continue"}],
+               [{next: 32, text: "Click for Oxygen!!"}],
 >>>>>>> FETCH_HEAD
 ];
 
