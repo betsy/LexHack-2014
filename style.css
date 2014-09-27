@@ -1,23 +1,9 @@
-
-body{
-	background-color:blue;
-	font-size:50px;
-	font-family:impact;
-	padding: 5px;
-	text-align: center;
-}
-
-div{ 
-	background-color: white;
-	width: ;
-	height: ;
-	padding-left: ;
-	padding-top: ;
-	padding-right: ;
-	padding-bottom: ;
-	font-size: 35px;
-	font-family: impact;
-}
+body {
+  background-color: blue;
+  font-size: 50px;
+  font-family: impact;
+  padding: 5px;
+  text-align: center; }
   body #demo {
     display: inline-block;
     font-family: verdana;
@@ -29,4 +15,3 @@ div{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-
