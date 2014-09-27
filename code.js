@@ -68,7 +68,7 @@ var stage=0;
 var counter;
 
 function myFunction(index) {
-	stage=stage%narration.length;
+	stage = index; //EDIT THIS LATER
 	var demoElement = document.getElementById("demo");
 	var hist=document.getElementById("history");
 	var newel = document.createElement("div");
@@ -78,12 +78,12 @@ function myFunction(index) {
 	//hist.innerHTML = "<p>earioghoer;h</p>" + hist.innerHTML;
     clearHidden();
 
-	stage = index; //EDIT THIS LATER
 
 	if(stage==2 && !counting){
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     	counting=true;
     }
+    if(stage==5 || stage==11) count-=60;
 
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
@@ -120,7 +120,7 @@ var counting=false;
 var count=600;
 function timer()
 {
-	document.getElementById("timer").innerText="Oxygen: "+count;
+	document.getElementById("timer").innerText="Oxygen: "+count+" stage: "+stage;
   	count=count-1;
     document.getElementById("game").style.opacity=count/600;
   if (count <= 0)
