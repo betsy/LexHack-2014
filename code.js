@@ -87,7 +87,7 @@ function myFunction(index) {
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     	counting=true;
     }
-    if(stage==5 || stage==8 || stage==11) count-=60;
+    if(stage==5 || stage==8 || stage==11 || stage=14) count-=60;
 
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
@@ -138,8 +138,4 @@ function timer()
      }, 0);
      return;
   }
-
-
-
-  //Do code for showing the number of seconds here
 }
