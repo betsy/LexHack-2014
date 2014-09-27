@@ -18,7 +18,7 @@ body {
       position: absolute;
       margin: auto;
       right: 0;
-      left: 0;
+      left: 1000px;
       width: 15%; }
   body #timer {
     position: absolute;

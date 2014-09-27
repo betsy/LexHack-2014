@@ -39,8 +39,8 @@ var narration = [
  /* 24 */"That escape pod is launched away. You find a new one.", 
  /* 25 */"Once inside, you see a similar control panel. However, this one also has an input bar (for the coordinates of the final destination) You want to close the door. Which button do you push now?", 
  /* 26 */"red button flashes, but nothing else changes", 
- /* 27*/"door closes behind you",
- /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
+ /* 27*/"door closes behind you, and the shuttle starts moving",
+ /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.'"];
 var choices = [
   /* s#  a# */	
   /* 0   0 */ [{next: 1, text: "Click me"}],
