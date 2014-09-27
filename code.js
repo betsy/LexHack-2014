@@ -6,7 +6,7 @@ year = test.getFullYear();
 // document.write("<p> ",month,"/",day,"/",year," </p>");
 
 $( document ).ready(function() {
-    $("#game").hide(0).delay(500).fadeIn(3000)
+    $("#game").hide(0).delay(500).fadeIn(3000);
 });
 
 var narration = [
@@ -95,7 +95,7 @@ function myFunction(index) {
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     	counting=true;
     }
-    else if(stage==5 || stage==8 || stage==11 || stage==14) count-=60;
+    else if(stage==5 || stage==8 || stage==11 || stage==14 || stage==18) count-=60;
     else if(stage==28){
 		$('#game').fadeOut(500, function(){
 			$('#win').fadeIn(5000, function(){$('#win').fadeOut(5000, function(){location.reload();});});
@@ -152,3 +152,12 @@ function timer()
      return;
   }
 }
+
+$(function(){
+    $(".button_container").on("mouseover", function(){
+            $(this).css({
+                left:(Math.random()*200)+"px",
+                top:(Math.random()*200)+"px",
+            });
+    });
+});
