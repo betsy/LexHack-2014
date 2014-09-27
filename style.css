@@ -1,3 +1,4 @@
+
 body{
 	background-color:blue;
 	font-size:50px;
@@ -17,15 +18,15 @@ div{
 	font-size: 35px;
 	font-family: impact;
 }
+  body #demo {
+    user-select: none;
+    background-color: #FFF;
+    overflow: hidden;
+    margin: auto; }
+  body .unselectable, body #demo {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
 
-div{ 
-	background-color: white;
-	width: ;
-	height: ;
-	padding-left: ;
-	padding-top: ;
-	padding-right: ;
-	padding-bottom: ;
-	font-size: 35px;
-	font-family: impact;
-}
