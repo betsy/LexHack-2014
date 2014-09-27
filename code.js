@@ -11,7 +11,7 @@ var narration = [/* 0 */ "A long, long time ago, in a galaxy far, far away, you 
  /* 3 */"The prison wardens back on the planet most likely know that all of the prisoners escaped from their cells into the main portion of the ship (you also know that there are escape pods somewhere on the ship: you want to find one and get back home)", 
  /* 4 */"You hear someone coming...what do you do? You have two options: approach or avoid the sound", 
  /* 5 */"The sound was made by another prisoner, they knock you out and you are unconscious for one minute.",
- /* 6 */"You survive for now..."
+ /* 6 */"You survive for now...",
  /* 7 */"You keep probing around for the escape pods. About 100 ft down the hall you see flashing blue and red buttons which could possibly open the door in front of you: They look ominous, but you know that you have to press one of them to open the door.What do you do? ", 
  /* 8 */"Turns out that the blue button calls an automated guard and it drugs you. You are able to avoid the brunt of the attack, but you pass out for a minute", 
  /* 9 */"Turns out that the red button opens the door. However, the door creates a loud metallic scratching sound as it opens so you better run away to make sure that no one comes looking for you", 
@@ -81,4 +81,21 @@ function clearHidden(){
 	         if(i>5) document.getElementById("history").removeChild(list[i]);
 	     }
 	}
+}
+
+var count=900;
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+	document.getElementById("timer").innerText=count;
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  //Do code for showing the number of seconds here
 }
