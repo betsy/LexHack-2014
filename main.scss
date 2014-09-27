@@ -7,9 +7,9 @@ body{
 	#demo{
 		@extend .unselectable;
 		display:inline-block;
-		font-family:verdana;
 		background-color:#FFF;
-		margin:auto;
+		margin:20px;
+		padding:20px;
 	}
 	.unselectable {
 	   -moz-user-select: none;

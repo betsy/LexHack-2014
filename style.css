@@ -6,9 +6,9 @@ body {
   text-align: center; }
   body #demo {
     display: inline-block;
-    font-family: verdana;
     background-color: #FFF;
-    margin: auto; }
+    margin: 20px;
+    padding: 20px; }
   body .unselectable, body #demo {
     -moz-user-select: none;
     -khtml-user-select: none;
