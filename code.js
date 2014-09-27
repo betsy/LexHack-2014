@@ -75,6 +75,10 @@ var stage=0;
 var counter;
 
 function myFunction(index) {
+
+	var audio = new Audio('01 - March Of The Toys.mp3');
+	audio.play();
+
 	stage = index; //EDIT THIS LATER
 	stage=stage%narration.length;
 	var demoElement = document.getElementById("demo");
