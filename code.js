@@ -13,10 +13,6 @@ function myFunction() {
 	hist.appendChild(newel);
 	// hist.removeChild(newel);
 	//hist.innerHTML = "<p>earioghoer;h</p>" + hist.innerHTML;
-    if(demoElement.style.color=="red"){
-    	demoElement.style.color = "green";
-    }
-    else demoElement.style.color = "red";
     clearHidden();
 }
 

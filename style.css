@@ -1,5 +1,5 @@
 body {
-  background-color: #FFF;
+  background-color: #666699;
   font-size: 50px;
   font-family: Verdana;
   padding: 5px;
@@ -8,9 +8,12 @@ body {
     font-weight: bold; }
   body #demo {
     display: inline-block;
-    background-color: gray;
+    background-color: #330066;
+    color: #FFF;
     margin: 20px;
     padding: 20px; }
+  body #demo:hover {
+    background-color: #8585BF; }
   body .unselectable, body #demo {
     -moz-user-select: none;
     -khtml-user-select: none;
