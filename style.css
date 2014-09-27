@@ -19,9 +19,9 @@ div{
 	font-family: impact;
 }
   body #demo {
-    user-select: none;
+    display: inline-block;
+    font-family: verdana;
     background-color: #FFF;
-    overflow: hidden;
     margin: auto; }
   body .unselectable, body #demo {
     -moz-user-select: none;

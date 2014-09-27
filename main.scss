@@ -5,10 +5,10 @@ body{
 	padding: 5px;
 	text-align: center;
 	#demo{
-		user-select:none;
 		@extend .unselectable;
+		display:inline-block;
+		font-family:verdana;
 		background-color:#FFF;
-		overflow:hidden;
 		margin:auto;
 	}
 	.unselectable {
