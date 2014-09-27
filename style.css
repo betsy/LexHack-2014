@@ -13,6 +13,13 @@ body {
     body #game #battery {
       position: absolute;
       float: right; }
+    body #game .wobble {
+      display: block;
+      position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      width: 15%; }
   body #timer {
     position: absolute;
     font-size: 0.5em; }
