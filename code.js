@@ -132,7 +132,10 @@ function timer()
      clearInterval(counter);
      //counter ended, do something here
      document.getElementById("lose").style.display="block";
-     document.getElementById("lose").style.opacity=1;
+     document.getElementById("lose").style.transition="opacity 1s";
+     setTimeout(function() {
+     	document.getElementById("lose").style.opacity=1;
+     }, 0);
      return;
   }
 
