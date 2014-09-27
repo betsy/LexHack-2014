@@ -37,9 +37,9 @@ var narration = [
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
 var choices = [
   /* s#  a# */	
-  /* 0   0 */ [{next: 1, text: "Click me if you dare"}],
+  /* 0   0 */ [{next: 1, text: "Click me"}],
   /* 1   1 */ [{next: 2, text: "Continue"}],
-  /* 2   2 */ [{next: 3, text: "Press here to set 10 minute countdown"}],
+  /* 2   2 */ [{next: 3, text: "Gotta hurry"}],
   /* 3   3 */ [{next: 4, text: "Continue"}],
   /* 4   4 */ [{next: 5, text: "Continue"}],
   /* 5   5 */ [{next: 6, text: "Avoid"}, {next:4, text: "Approach"}],
@@ -117,12 +117,12 @@ function clearHidden(){
 }
 
 var counting=false;
-var count=20;
+var count=600;
 function timer()
 {
 	document.getElementById("timer").innerText="Oxygen: "+count;
   	count=count-1;
-    document.getElementById("game").style.opacity=count/20;
+    document.getElementById("game").style.opacity=count/600;
   if (count <= 0)
   {
      clearInterval(counter);
