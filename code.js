@@ -4,8 +4,9 @@ month = (month * 1) + 1;
 day = test.getDate();
 year = test.getFullYear();
 document.write("<p> ",month,"/",day,"/",year," </p>");
-
-var narration = ["A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship and you seem to have forgotten everything about your past and who you are.","For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?"];
+var narration = ["A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship. You seem to have forgotten everything about your past and who you are, except your name.",
+"For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?",
+"You notice that the oxygen generators are no longer working... you estimate that you have about 10 mins of oxygen and set a timer on your watch"];
 var stage=0;
 
 function myFunction() {
@@ -14,7 +15,7 @@ function myFunction() {
 	var newel = document.createElement("div");
 	newel.innerText = narration[stage%narration.length];
 	stage++;
-	hist.appendChild(newel);
+	hist.insertBefore(newel, hist.firstChild);
 	// hist.removeChild(newel);
 	//hist.innerHTML = "<p>earioghoer;h</p>" + hist.innerHTML;
     clearHidden();
