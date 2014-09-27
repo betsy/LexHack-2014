@@ -41,7 +41,7 @@ var narration = [
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
 var choices = [
   /* s#  a# */	
-  /* 0   0 */ [{next: 27, text: "Click me"}],
+  /* 0   0 */ [{next: 1, text: "Click me"}],
   /* 1   1 */ [{next: 2, text: "Continue"}],
   /* 2   2 */ [{next: 3, text: "Gotta hurry"}],
   /* 3   3 */ [{next: 4, text: "Continue"}],
@@ -94,7 +94,7 @@ function myFunction(index) {
     else if(stage==5 || stage==8 || stage==11 || stage==14) count-=60;
     else if(stage==28){
 		$('#game').fadeOut(500, function(){
-			$('#win').fadeIn(5000);
+			$('#win').fadeIn(5000, function(){$('#win').fadeOut(5000, function(){location.reload();});});
 		});
     }
 
@@ -141,7 +141,7 @@ function timer()
      clearInterval(counter);
      //counter ended, do something here
      document.getElementById("lose").style.display="block";
-     document.getElementById("lose").style.transition="opacity 1s";
+     document.getElementById("lose").style.transition="opacity 5s";
      setTimeout(function() {
      	document.getElementById("lose").style.opacity=1;
      }, 0);
