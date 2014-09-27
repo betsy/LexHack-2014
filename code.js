@@ -29,7 +29,10 @@ function myFunction() {
 		newButton.className="demo";
 		newButton.onclick=myFunction;
 		newButton.innerText=choices[stage][i];
-		buttons.appendChild(newButton);
+
+		var newContainer=document.createElement("div");
+		newContainer.appendChild(newButton);
+		buttons.appendChild(newContainer);
 	}
 	stage++; //EDIT THIS LATER
 }
