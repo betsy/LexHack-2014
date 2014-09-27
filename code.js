@@ -6,8 +6,11 @@ year = test.getFullYear();
 document.write("<p> ",month,"/",day,"/",year," </p>");
 
 function myFunction() {
-    if(document.getElementById("demo").style.color==="red"){
-    	document.getElementById("demo").style.color = "green";
+	var demoElement = document.getElementById("demo");
+    if(demoElement.style.color==="red"){
+    	demoElement = "green";
     }
-    else document.getElementById("demo").style.color = "red";
+    else demoElement.style.color = "red";
+
+    document.body.innerHTML += "<p>earioghoer;h</p>";
 }
