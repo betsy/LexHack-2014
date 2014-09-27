@@ -34,9 +34,27 @@ var narration = [/* 0 */ "A long, long time ago, in a galaxy far, far away, you 
  /* 26 */"door closes behind you",
  /* 27 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
 var choices = [
-  [{next: 1, text: "Continue"}],
-  [{next: 2, text: "Get up"},{next:0,text:"Go back to sleep"}],
-  [{next: 1, text:"Continue"}]
+  /* 0 */ [{next: 1, text: "Click me if you dare"}],
+  /* 1 */ [{next: 2, text: "Continue"}],
+  /* 2 */ [{next: 3, text: "Press here to set 10 minute countdown"}],
+  /* 3 */ [{next: 4, text: "Continue"}],
+  /* 4 */ [{next: 5, text: "Continue"}],
+  /* 5 */ [{next: 6, text: "Avoid"}, {next:4, text: "Approach"}],
+  /* 6 */ [{next: 7, text: "Continue"}],
+  /* 7 */ [{next: 8, text: "Blue"}, {next: 9, text: "Red"}],
+  /* 8 and 9??? */ [{next: 10, text: "Continue"}],
+  /* 10 */ [{next: 11, text: "Approach"}, {next: 12, text: "Avoid"}],
+  /* 11 and 12 */ [{next: 13, text: "Continue"}],
+  /* 13 */ [{next: 14, text: "Approach"}, {next: 15, text: "Avoid"}],
+  /* 14 and 15?? */ [{next: 16, text: "Continue"}],
+  /* 16 */ [{next: 17, text: "Approach"}, {next: 18, text: "Avoid"}],
+  /* 17 */ [{next: 19, text: "Continue"}], 
+  /* 18 */ [{next: 0, text: "Retry"}], // Once at 18
+  /* 19 */ [{next: 20, text: "Continue"}],
+  /* 20 */ [{next: 21, text: "Green"}, {next: 23, text: "Blue"}, {next: 22, text: "Red"}],
+  /* 21 */ [{next: 24, text: "Continue"}],
+  /* 24 */ [{next: 25, text: "Continue"}],
+  /* 25 */ [{next: 26, text: "Continue"}],
 ];
 
 var stage=0;
