@@ -1,12 +1,14 @@
 body {
-  background-color: blue;
+  background-color: #FFF;
   font-size: 50px;
-  font-family: impact;
+  font-family: Verdana;
   padding: 5px;
   text-align: center; }
+  body #title {
+    font-weight: bold; }
   body #demo {
     display: inline-block;
-    background-color: #FFF;
+    background-color: gray;
     margin: 20px;
     padding: 20px; }
   body .unselectable, body #demo {
@@ -15,3 +17,5 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  body #history div {
+    font-size: 0.5em; }

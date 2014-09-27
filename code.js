@@ -24,7 +24,6 @@ function clearHidden(){
 	var list=document.getElementById("history").childNodes;
 	for(var i=0; i<list.length; i++) {
 	    if (list[i].nodeName.toLowerCase() == 'div') {
-	         list[i].style.color = "red";
 	         if(i>5) document.getElementById("history").removeChild(list[i]);
 	     }
 	}
