@@ -133,7 +133,7 @@ var counting=false;
 var count=600;
 function timer()
 {
-	document.getElementById("timer").innerText="Oxygen: "+count+" stage: "+stage;
+	document.getElementById("timer").innerText="Oxygen: "+count;
   	count=count-1;
     document.getElementById("game").style.opacity=count/600;
   if (count <= 0)
