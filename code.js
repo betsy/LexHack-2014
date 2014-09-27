@@ -76,7 +76,7 @@ var counter;
 
 function myFunction(index) {
 
-	var audio = new Audio('01 - March Of The Toys.mp3');
+	var audio = new Audio('01 - March Of The Toys.mp3'); //unfortunately this keeps starting and playing over... I want to start it once and just keep it playing...
 	audio.play();
 
 	stage = index; //EDIT THIS LATER
