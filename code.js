@@ -45,11 +45,14 @@ var choices = [
   /* 5   4 */ [{next: 7, text: "Continue"}],
   /* 6   6 */ [{next: 7, text: "Continue"}],
   /* 7   7 */ [{next: 8, text: "Blue"}, {next: 9, text: "Red"}],
-  /* 8-9  8 */ [{next: 10, text: "Continue"}],
+  /* 8  8 */ [{next: 10, text: "Continue"}],
+  	/*9*/			[{next: 10, text: "Continue"}],
   /* 10    9 */ [{next: 11, text: "Approach"}, {next: 12, text: "Avoid"}],
-  /* 11-12 10 */ [{next: 13, text: "Continue"}],
+  /* 11 10 */ [{next: 13, text: "Continue"}],
+    /* 12 10 */ [{next: 13, text: "Continue"}],
   /* 13    11*/ [{next: 14, text: "Approach"}, {next: 15, text: "Avoid"}],
-  /* 14-15 12 */ [{next: 16, text: "Continue"}],
+  /* 14 12 */ [{next: 16, text: "Continue"}],
+    /* 15 12 */ [{next: 16, text: "Continue"}],
   /* 16   13*/ [{next: 17, text: "Approach"}, {next: 18, text: "Avoid"}],
   /* 17   14 */ [{next: 19, text: "Continue"}], 
   /* 18   15*/ [{next: 0, text: "Retry"}],
@@ -58,7 +61,7 @@ var choices = [
   /* 21   18*/ [{next: 22, text: "Green"}, {next: 24, text: "Blue"}, {next: 23, text: "Red"}],
   /* 22   18*/ [{next: 25, text: "Continue"}],
   /* 23   19*/ [{next: 21, text: "Continue"}], 
-  /* 24   20*/ [{next: 25, text: "Continue"}],
+  /* 24   20*/ [{next: 21, text: "Continue"}],
   /* 25   21*/ [{next: 26, text: "Green"}, {next: 27, text: "Red"}, {next: 26, text: "Blue"}],
   /* 26   22*/ [{next: 25, text: "Continue"}],
   /* 27   23*/ [{next: 28, text: "Continue"}],
@@ -84,7 +87,7 @@ function myFunction(index) {
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
     	counting=true;
     }
-    if(stage==5 || stage==11) count-=60;
+    if(stage==5 || stage==8 || stage==11) count-=60;
 
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
