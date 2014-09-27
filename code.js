@@ -34,12 +34,12 @@ var narration = [/* 0 */ "A long, long time ago, in a galaxy far, far away, you 
  /* 26 */"door closes behind you",
  /* 27 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!"];
 var choices = [
-  /* 0 */ [{next: 1, text: "Click me if you dare"}],
+  /* 0 */ [{next: 1, text: "Click me"}],
   /* 1 */ [{next: 2, text: "Continue"}],
-  /* 2 */ [{next: 3, text: "Press here to set 10 minute countdown"}],
+  /* 2 */ [{next: 3, text: "Gotta hurry"}],
   /* 3 */ [{next: 4, text: "Continue"}],
-  /* 4 */ [{next: 5, text: "Continue"}],
-  /* 5 */ [{next: 6, text: "Avoid"}, {next:4, text: "Approach"}],
+  /* 4 */ [{next: 6, text: "Avoid"}, {next:4, text: "Approach"}],
+  /* 5 */ [{next: 5, text: "Continue"}],
   /* 6 */ [{next: 7, text: "Continue"}],
   /* 7 */ [{next: 8, text: "Blue"}, {next: 9, text: "Red"}],
   /* 8 and 9??? */ [{next: 10, text: "Continue"}],
@@ -61,7 +61,8 @@ var stage=0;
 var counter;
 
 function myFunction(index) {
-	stage=stage%narration.length;
+	stage = index; //EDIT THIS LATER
+	console.log(stage);
 	var demoElement = document.getElementById("demo");
 	var hist=document.getElementById("history");
 	var newel = document.createElement("div");
@@ -71,7 +72,6 @@ function myFunction(index) {
 	//hist.innerHTML = "<p>earioghoer;h</p>" + hist.innerHTML;
     clearHidden();
 
-	stage = index; //EDIT THIS LATER
 
 	if(stage==2 && !counting){
 		counter=setInterval(timer, 1000); //1000 will  run it every 1 second
@@ -110,12 +110,12 @@ function clearHidden(){
 }
 
 var counting=false;
-var count=20;
+var count=600;
 function timer()
 {
 	document.getElementById("timer").innerText="Oxygen: "+count;
   	count=count-1;
-    document.getElementById("game").style.opacity=count/20;
+    document.getElementById("game").style.opacity=count/600;
   if (count <= 0)
   {
      clearInterval(counter);
