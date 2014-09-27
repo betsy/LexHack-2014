@@ -7,10 +7,12 @@ document.write("<p> ",month,"/",day,"/",year," </p>");
 
 function myFunction() {
 	var demoElement = document.getElementById("demo");
-    if(demoElement.style.color==="red"){
-    	demoElement = "green";
+	var hist=document.getElementById("history");
+	hist.innerHTML = "<p>earioghoer;h</p>" + hist.innerHTML;
+    if(demoElement.style.color=="red"){
+    	demoElement.style.color = "green";
     }
     else demoElement.style.color = "red";
 
-    document.body.innerHTML += "<p>earioghoer;h</p>";
+    
 }
