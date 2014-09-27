@@ -5,12 +5,6 @@ day = test.getDate();
 year = test.getFullYear();
 // document.write("<p> ",month,"/",day,"/",year," </p>");
 
-function playmusic()
-{
-var audio = new Audio('01 - March Of The Toys.mp3');
-console.log("hello");
-audio.play();
-}
 
 
 $( document ).ready(function() {
