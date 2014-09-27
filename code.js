@@ -5,6 +5,14 @@ day = test.getDate();
 year = test.getFullYear();
 // document.write("<p> ",month,"/",day,"/",year," </p>");
 
+function playmusic()
+{
+var audio = new Audio('01 - March Of The Toys.mp3');
+console.log("hello");
+audio.play();
+}
+
+
 $( document ).ready(function() {
     $("#game").hide(0).delay(500).fadeIn(3000);
 });
@@ -74,10 +82,8 @@ var choices = [
 var stage=0;
 var counter;
 
-function myFunction(index) {
 
-	var audio = new Audio('01 - March Of The Toys.mp3'); //unfortunately this keeps starting and playing over... I want to start it once and just keep it playing...
-	audio.play();
+function myFunction(index) {
 
 	stage = index; //EDIT THIS LATER
 	stage=stage%narration.length;
