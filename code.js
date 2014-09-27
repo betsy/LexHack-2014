@@ -8,10 +8,15 @@ year = test.getFullYear();
 var narration = ["A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship. You seem to have forgotten everything about your past and who you are, except your name.",
 "For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?",
 "You notice that the oxygen generators are no longer working... you estimate that you have about 10 mins of oxygen and set a timer on your watch"];
-var choices = [["Continue"],["Get up","Go back to sleep"],["Continue"]];
+var choices = [
+  [{next: 1, text: "Continue"}],
+  [{next: 2, text: "Get up"},{next:0,text:"Go back to sleep"}],
+  [{next:1,text:"Continue"}]
+];
+
 var stage=0;
 
-function myFunction() {
+function myFunction(index) {
 	stage=stage%narration.length;
 	var demoElement = document.getElementById("demo");
 	var hist=document.getElementById("history");
@@ -22,19 +27,22 @@ function myFunction() {
 	//hist.innerHTML = "<p>earioghoer;h</p>" + hist.innerHTML;
     clearHidden();
 
+	stage = index; //EDIT THIS LATER
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
-	for(var i=0;i<choices[stage].length;i++){
+	for(var i=0;i<choices[stage].length;i++){ (function(_i) {
 		var newButton=document.createElement("div");
 		newButton.className="demo";
-		newButton.onclick=myFunction;
-		newButton.innerText=choices[stage][i];
+		newButton.onclick=function(){
+			myFunction(choices[stage][_i].next);
+		};
+		newButton.innerText=choices[stage][_i].text;
 
 		var newContainer=document.createElement("div");
 		newContainer.appendChild(newButton);
 		buttons.appendChild(newContainer);
-	}
-	stage++; //EDIT THIS LATER
+	}(i)) }
+
 }
 
 function clearButtons(buttons){
