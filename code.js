@@ -39,26 +39,14 @@ var narration = [
  /* 24 */"That escape pod is launched away. You find a new one.", 
  /* 25 */"Once inside, you see a similar control panel. However, this one also has an input bar (for the coordinates of the final destination) You want to close the door. Which button do you push now?", 
  /* 26 */"red button flashes, but nothing else changes", 
-<<<<<<< HEAD
  /* 27*/"door closes behind you",
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
 /* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT’S TOO LATE!!!!!!!",
-/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope",
-/* 31 */"Suddenly, you see an oxygen tank floating around in space! Try to catch it!",
-/* 32 */"Congrats! You have one more minute of oxygen", 
-
-=======
- /* 27*/"door closes behind you, and the shuttle starts moving",
- /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.'"];
->>>>>>> FETCH_HEAD
+/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope", 
+/* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?", 
+/* 32 */ "You encountered some pirates and they murdered you. You dieded.",
+/* 33 */ "You actually had enough oxygen to complete the long journey home. Good job! You survived the journey home."
 var choices = [
-<<<<<<< HEAD
-  [{next: 1, text: "Click me if you dare"}],
-  [{next: 2, text: "Continue"},{next:0,text:"Go back to sleep"}],
-  [{next: 3, text: "Press here to set 10 minute countdown"}],
-  [{next: 4, text: "Continue"}],
-  [{next: 5, text: "Avoid"}, {next:4, text: "Approach"}],
-=======
   /* s#  a# */	
   /* 0   0 */ [{next: 1, text: "Click me"}],
   /* 1   1 */ [{next: 2, text: "Continue"}],
@@ -90,9 +78,9 @@ var choices = [
   /* 27   23*/ [{next: 28, text: "Continue"}],
                [{next: 29, text: "Continue"}], 
                [{next: 30, text: "Click me to catch me!!!"}],
-               [{next: 31, text: "Continue"}],
-               [{next: 32, text: "Click for Oxygen!!"}],
->>>>>>> FETCH_HEAD
+                [{next: 31, text: "Continue"}],
+               [{next: 32, text: "I'll risk the pirates"}, {next: 33, text: "I'll risk running out of oxygen"}],
+
 ];
 
 var stage=0;
@@ -173,8 +161,6 @@ function timer()
      }, 0);
      return;
   }
-<<<<<<< HEAD
-
 
 
   //Do code for showing the number of seconds here
@@ -190,7 +176,3 @@ $(function(){
             });
     });
 });
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
