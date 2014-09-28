@@ -1,4 +1,4 @@
-test = new Date();
+btest = new Date();
 month = test.getMonth();
 month = (month * 1) + 1;
 day = test.getDate();
@@ -29,27 +29,19 @@ var narration = [
  /* 14 */"Oh no, it's actually a guard! Fortunately for you, instead of killing you on the spot, it knocks you out for a minute, then loses power and shuts down.", 
  /* 15 */"You survive, YAY :D", 
  /* 16 */"Ahead you see a constant purple light. Do you:", 
- /* 17 */"It is where the escape pods are", 
+ /* 17 */"You hope that this leads to the escape pods...", 
  /* 18 */"You wander around aimlessly", 
  /* 19 */"Hooray! You have reached the escape pods! A few of them are missing, so there must be a way to get off the ship.", 
  /* 20 */"You see a control panel for the escape pod nearest to you. It has several buttons, but none of them are labelled.",
  /* 21 */"You focus on the 3 main buttons: the blue, green and red ones. You want to open the door first so that you can get inside. Which button do you press?", 
- /* 22 */"Correct! It opens", 
- /* 23 */"Gears click but nothing else happens", 
+ /* 22 */"Correct! It opens.", 
+ /* 23 */"Gears click but nothing else happens.", 
  /* 24 */"That escape pod is launched away. You find a new one.", 
- /* 25 */"Once inside, you see a similar control panel. However, this one also has an input bar (for the coordinates of the final destination) You want to close the door. Which button do you push now?", 
+ /* 25 */"Once inside, you see a similar control panel. You want to close the door. Which button do you push now?", 
  /* 26 */"red button flashes, but nothing else changes", 
- /* 27*/"door closes behind you, and the shuttle starts moving",
+/* 27*/"The door closes behind you, and the shuttle starts moving",
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
 /* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT'S TOO LATE!!!!!!!",
-<<<<<<< HEAD
-/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope",
-/* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?",
-/* 32 */"You dare the pirates. People like you ain't afraid of no pirates.",
-/* 33 */"You risk running out of oxygen and avoid the pirates",
-/* 34 */"You safely continue on your way home. The way is calm, and you drift off to sleep."
-];
-=======
 /* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope"];
 /* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?", 
 /* 32 */ "You encountered some pirates and they murdered you. You dieded.",
@@ -58,7 +50,6 @@ var narration = [
 
 
 >>>>>>> FETCH_HEAD
->>>>>>> origin/gh-pages
 var choices = [
   /* s#  a# */	
   /* 0   0 */ [{next: 1, text: "Click me"}],
@@ -90,12 +81,6 @@ var choices = [
   /* 26   22*/ [{next: 25, text: "Continue"}],
   /* 27   23*/ [{next: 28, text: "Continue"}],
 <<<<<<< HEAD
- /*28*/			[{next: 29, text: "Continue"}], 
- /*29*/		     [{next: 30, text: "Gyroscope"}],
-/*30*/			 [{next: 31, text: "Continue"}],
- /*31*/          [{next: 32, text: "I'll risk the pirates"}, {next: 33, text: "Pirates are scary"}],
-=======
-<<<<<<< HEAD
  /*28*/     [{next: 29, text: "Continue"}], 
  /*29*/        [{next: 30, text: "Gyroscope"}],
                 [{next: 31, text: "Continue"}],
@@ -104,7 +89,6 @@ var choices = [
 =======
 
 >>>>>>> FETCH_HEAD
->>>>>>> origin/gh-pages
 ];
 
 var stage=0;
@@ -130,21 +114,12 @@ function myFunction(index) {
     	counting=true;
     }
     else if(stage==5 || stage==8 || stage==11 || stage==14 || stage==18) count-=60;
-    else if(stage==32){
-    	var survive=Math.random()<0.5;
-    	if(survive) stage=34;
-    	else count=0;
-    }
-    else if(stage==33){
-    	var survive=Math.random()*400<count;
-    	if(survive) stage=34;
-    	else count=0;
-    }
-    if(stage==34){
+    else if(stage==30){
 		$('#game').fadeOut(500, function(){
 			$('#win').fadeIn(5000, function(){$('#win').fadeOut(5000, function(){location.reload();});});
 		});
     }
+
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
 
@@ -175,7 +150,9 @@ function myFunction(index) {
 	                top:(Math.random()*200)+100+"px",
 	            });
 	    });
+
     }
+
 
 }
 
