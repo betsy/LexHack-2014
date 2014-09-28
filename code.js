@@ -5,6 +5,8 @@ day = test.getDate();
 year = test.getFullYear();
 // document.write("<p> ",month,"/",day,"/",year," </p>");
 
+
+
 $( document ).ready(function() {
     $("#game").hide(0).delay(500).fadeIn(3000);
 });
@@ -37,6 +39,7 @@ var narration = [
  /* 24 */"That escape pod is launched away. You find a new one.", 
  /* 25 */"Once inside, you see a similar control panel. However, this one also has an input bar (for the coordinates of the final destination) You want to close the door. Which button do you push now?", 
  /* 26 */"red button flashes, but nothing else changes", 
+<<<<<<< HEAD
  /* 27*/"door closes behind you",
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
 /* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT’S TOO LATE!!!!!!!",
@@ -44,6 +47,10 @@ var narration = [
 /* 31 */"Suddenly, you see an oxygen tank floating around in space! Try to catch it!",
 /* 32 */"Congrats! You have one more minute of oxygen", 
 
+=======
+ /* 27*/"door closes behind you, and the shuttle starts moving",
+ /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.'"];
+>>>>>>> FETCH_HEAD
 var choices = [
 <<<<<<< HEAD
   [{next: 1, text: "Click me if you dare"}],
@@ -91,10 +98,8 @@ var choices = [
 var stage=0;
 var counter;
 
-function myFunction(index) {
 
-	var audio = new Audio('01 - March Of The Toys.mp3'); //unfortunately this keeps starting and playing over... I want to start it once and just keep it playing...
-	audio.play();
+function myFunction(index) {
 
 	stage = index; //EDIT THIS LATER
 	stage=stage%narration.length;
@@ -185,4 +190,7 @@ $(function(){
             });
     });
 });
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
 >>>>>>> FETCH_HEAD
