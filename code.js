@@ -42,12 +42,23 @@ var narration = [
  /* 27*/"door closes behind you, and the shuttle starts moving",
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
 /* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT'S TOO LATE!!!!!!!",
+<<<<<<< HEAD
 /* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope",
 /* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?",
 /* 32 */"You dare the pirates. People like you ain't afraid of no pirates.",
 /* 33 */"You risk running out of oxygen and avoid the pirates",
 /* 34 */"You safely continue on your way home. The way is calm, and you drift off to sleep."
 ];
+=======
+/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope"];
+/* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?", 
+/* 32 */ "You encountered some pirates and they murdered you. You dieded.",
+/* 33 */ "You actually had enough oxygen to complete the long journey home. Good job! You survived the journey home."
+=======
+
+
+>>>>>>> FETCH_HEAD
+>>>>>>> origin/gh-pages
 var choices = [
   /* s#  a# */	
   /* 0   0 */ [{next: 1, text: "Click me"}],
@@ -78,10 +89,22 @@ var choices = [
   /* 25   21*/ [{next: 26, text: "Green"}, {next: 27, text: "Red"}, {next: 26, text: "Blue"}],
   /* 26   22*/ [{next: 25, text: "Continue"}],
   /* 27   23*/ [{next: 28, text: "Continue"}],
+<<<<<<< HEAD
  /*28*/			[{next: 29, text: "Continue"}], 
  /*29*/		     [{next: 30, text: "Gyroscope"}],
 /*30*/			 [{next: 31, text: "Continue"}],
  /*31*/          [{next: 32, text: "I'll risk the pirates"}, {next: 33, text: "Pirates are scary"}],
+=======
+<<<<<<< HEAD
+ /*28*/     [{next: 29, text: "Continue"}], 
+ /*29*/        [{next: 30, text: "Gyroscope"}],
+                [{next: 31, text: "Continue"}],
+               [{next: 32, text: "I'll risk the pirates"}, {next: 33, text: "I'll risk running out of oxygen"}],
+
+=======
+
+>>>>>>> FETCH_HEAD
+>>>>>>> origin/gh-pages
 ];
 
 var stage=0;
@@ -187,4 +210,9 @@ function timer()
      }, 0);
      return;
   }
+
+
+  //Do code for showing the number of seconds here
+}
+=======
 }
