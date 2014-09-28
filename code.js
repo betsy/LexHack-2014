@@ -68,7 +68,7 @@ var choices = [
     /* 15 12 */ [{next: 16, text: "Continue"}],
   /* 16   13*/ [{next: 17, text: "Approach"}, {next: 18, text: "Avoid"}],
   /* 17   14 */ [{next: 19, text: "Continue"}], 
-  /* 18   15*/ [{next: 0, text: "Retry"}],
+  /* 18   15*/ [{next: 4, text: "zzz"}],
   /* 19   16*/ [{next: 20, text: "Continue"}],
   /* 20   17*/ [{next: 21, text: "Continue"}],
   /* 21   18*/ [{next: 22, text: "Green"}, {next: 24, text: "Blue"}, {next: 23, text: "Red"}],
@@ -175,6 +175,7 @@ function timer()
 {
 	document.getElementById("timer").innerText="Oxygen: "+count;
   	count=count-1;
+  	if(stage==29) count-=3;
     document.getElementById("game").style.opacity=count/600;
   if (count <= 0)
   {
