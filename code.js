@@ -26,7 +26,7 @@ var narration = [
  /* 11 */"They knock you out and you pass out for a minute", 
  /* 12 */"You survive and keep going", 
  /* 13 */"You see a circulating blue light on top of an object that is moving in the same direction as you. Do you:", 
- /* 14 */"Oh no, it’s actually a guard! Fortunately for you, instead of killing you on the spot, it knocks you out for a minute, then loses power and shuts down.", 
+ /* 14 */"Oh no, it's actually a guard! Fortunately for you, instead of killing you on the spot, it knocks you out for a minute, then loses power and shuts down.", 
  /* 15 */"You survive, YAY :D", 
  /* 16 */"Ahead you see a constant purple light. Do you:", 
  /* 17 */"It is where the escape pods are", 
@@ -39,13 +39,17 @@ var narration = [
  /* 24 */"That escape pod is launched away. You find a new one.", 
  /* 25 */"Once inside, you see a similar control panel. However, this one also has an input bar (for the coordinates of the final destination) You want to close the door. Which button do you push now?", 
  /* 26 */"red button flashes, but nothing else changes", 
- /* 27*/"door closes behind you",
+/* 27*/"door closes behind you, and the shuttle starts moving",
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
-/* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT’S TOO LATE!!!!!!!",
-/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope", 
+/* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT'S TOO LATE!!!!!!!",
+/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope"];
 /* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?", 
 /* 32 */ "You encountered some pirates and they murdered you. You dieded.",
 /* 33 */ "You actually had enough oxygen to complete the long journey home. Good job! You survived the journey home."
+=======
+
+
+>>>>>>> FETCH_HEAD
 var choices = [
   /* s#  a# */	
   /* 0   0 */ [{next: 1, text: "Click me"}],
@@ -76,11 +80,15 @@ var choices = [
   /* 25   21*/ [{next: 26, text: "Green"}, {next: 27, text: "Red"}, {next: 26, text: "Blue"}],
   /* 26   22*/ [{next: 25, text: "Continue"}],
   /* 27   23*/ [{next: 28, text: "Continue"}],
-               [{next: 29, text: "Continue"}], 
-               [{next: 30, text: "Click me to catch me!!!"}],
+<<<<<<< HEAD
+ /*28*/     [{next: 29, text: "Continue"}], 
+ /*29*/        [{next: 30, text: "Gyroscope"}],
                 [{next: 31, text: "Continue"}],
                [{next: 32, text: "I'll risk the pirates"}, {next: 33, text: "I'll risk running out of oxygen"}],
 
+=======
+
+>>>>>>> FETCH_HEAD
 ];
 
 var stage=0;
@@ -106,7 +114,7 @@ function myFunction(index) {
     	counting=true;
     }
     else if(stage==5 || stage==8 || stage==11 || stage==14 || stage==18) count-=60;
-    else if(stage==28){
+    else if(stage==30){
 		$('#game').fadeOut(500, function(){
 			$('#win').fadeIn(5000, function(){$('#win').fadeOut(5000, function(){location.reload();});});
 		});
@@ -124,9 +132,27 @@ function myFunction(index) {
 		newButton.innerText=choices[stage][_i].text;
 
 		var newContainer=document.createElement("div");
+		$(newContainer).addClass("button_container");
 		newContainer.appendChild(newButton);
 		buttons.appendChild(newContainer);
 	}(i)) }
+
+	if(stage==29){
+		console.log('wobbling');
+    	$(".button_container").each(function(index, element) {
+	    	$(element).addClass("wobble");
+	    	console.log('added wobble');
+    	});
+
+	    $(".wobble").on("mouseover", function(){
+	            $(this).css({
+	                left:(Math.random()*200)+700+"px",
+	                top:(Math.random()*200)+100+"px",
+	            });
+	    });
+
+    }
+
 
 }
 
@@ -167,12 +193,3 @@ function timer()
 }
 =======
 }
-
-$(function(){
-    $(".button_container").on("mouseover", function(){
-            $(this).css({
-                left:(Math.random()*200)+"px",
-                top:(Math.random()*200)+"px",
-            });
-    });
-});
