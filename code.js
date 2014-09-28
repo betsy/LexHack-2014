@@ -14,7 +14,7 @@ $( document ).ready(function() {
 var narration = [
  /* 0 */ "A long, long time ago, in a galaxy far, far away, you are a prisoner on a maximum security automated galactic prison ship and you seem to have forgotten everything about your past and who you are",
  /* 1 */"For the first time in years, a solar flare causes a power outage on the ship and the locks are disabled...what do you do?", 
- /* 2 */"You notice that the oxygen generators are no longer working... you estimate that you have about 10 mins of oxygen and set a timer on your watch", 
+ /* 2 */"You notice that the oxygen generators are no longer working... you estimate that you have about 5 mins of oxygen and set a timer on your watch", 
  /* 3 */"The prison wardens back on the planet most likely know that all of the prisoners escaped from their cells into the main portion of the ship (you also know that there are escape pods somewhere on the ship: you want to find one and get back home)", 
  /* 4 */"You hear someone coming...what do you do? You have two options: approach or avoid the sound", 
  /* 5 */"The sound was made by another prisoner, they knock you out and you are unconscious for one minute.",
@@ -170,13 +170,13 @@ function clearHidden(){
 }
 
 var counting=false;
-var count=600;
+var count=300;
 function timer()
 {
 	document.getElementById("timer").innerText="Oxygen: "+count;
   	count=count-1;
   	if(stage==29) count-=3;
-    document.getElementById("game").style.opacity=count/600;
+    document.getElementById("game").style.opacity=count/300;
   if (count <= 0)
   {
      clearInterval(counter);
