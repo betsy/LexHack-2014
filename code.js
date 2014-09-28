@@ -42,9 +42,12 @@ var narration = [
  /* 27*/"door closes behind you, and the shuttle starts moving",
  /* 28 */"Now the input bar flashes, and you select the nearest coordinates, labeled 'Home.' Good job! You have finished the game!...or so you think",
 /* 29 */"Just then, a meteor shower threatens to throw you off course. You try to grab your steering wheel, but it is too late. A meteor hits your escape pod and sends you flying. You lose your gyroscope. QUICK! CATCH YOUR GYROSCOPE BEFORE IT'S TOO LATE!!!!!!!",
-/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope"];
-
-
+/* 30 */"You were able to catch your gyroscope and get back on course. Unfortunately, you used up a lot of Oxygen when trying to catch the gyroscope",
+/* 31 */"You want to take a shortcut home so that you don't risk of running out of oxygen. However, the shortcut might have rogue, deadly pirates. Do you risk running into pirates, who will take both your life and your ship, or will you risk running out of oxygen?",
+/* 32 */"You dare the pirates. People like you ain't afraid of no pirates.",
+/* 33 */"You risk running out of oxygen and avoid the pirates",
+/* 34 */"You safely continue on your way home. The way is calm, and you drift off to sleep."
+];
 var choices = [
   /* s#  a# */	
   /* 0   0 */ [{next: 1, text: "Click me"}],
@@ -77,6 +80,8 @@ var choices = [
   /* 27   23*/ [{next: 28, text: "Continue"}],
  /*28*/			[{next: 29, text: "Continue"}], 
  /*29*/		     [{next: 30, text: "Gyroscope"}],
+/*30*/			 [{next: 31, text: "Continue"}],
+ /*31*/          [{next: 32, text: "I'll risk the pirates"}, {next: 33, text: "Pirates are scary"}],
 ];
 
 var stage=0;
@@ -102,12 +107,21 @@ function myFunction(index) {
     	counting=true;
     }
     else if(stage==5 || stage==8 || stage==11 || stage==14 || stage==18) count-=60;
-    else if(stage==30){
+    else if(stage==32){
+    	var survive=Math.random()<0.5;
+    	if(survive) stage=34;
+    	else count=0;
+    }
+    else if(stage==33){
+    	var survive=Math.random()*400<count;
+    	if(survive) stage=34;
+    	else count=0;
+    }
+    if(stage==34){
 		$('#game').fadeOut(500, function(){
 			$('#win').fadeIn(5000, function(){$('#win').fadeOut(5000, function(){location.reload();});});
 		});
     }
-
     var buttons=document.getElementById("buttons");
 	clearButtons(buttons);
 
@@ -138,9 +152,7 @@ function myFunction(index) {
 	                top:(Math.random()*200)+100+"px",
 	            });
 	    });
-
     }
-
 
 }
 
