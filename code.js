@@ -113,7 +113,7 @@ function myFunction(index) {
     	else count=0;
     }
     else if(stage==33){
-    	var survive=Math.random()*400<count;
+    	var survive=Math.random()*250<count;
     	if(survive) stage=34;
     	else count=0;
     }
