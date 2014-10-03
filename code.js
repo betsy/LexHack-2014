@@ -1,12 +1,3 @@
-test = new Date();
-month = test.getMonth();
-month = (month * 1) + 1;
-day = test.getDate();
-year = test.getFullYear();
-// document.write("<p> ",month,"/",day,"/",year," </p>");
-
-
-
 $( document ).ready(function() {
     $("#game").hide(0).delay(500).fadeIn(3000);
 });
@@ -90,8 +81,7 @@ var counter;
 
 function myFunction(index) {
 
-	stage = index; //EDIT THIS LATER
-	stage=stage%narration.length;
+	stage = index;
 	var demoElement = document.getElementById("demo");
 	var hist=document.getElementById("history");
 	var newel = document.createElement("div");
